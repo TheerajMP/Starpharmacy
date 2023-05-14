@@ -1,0 +1,31 @@
+.box{
+    /* border:2px solid red; */
+    background-color: rgb(183, 25, 25) ;
+    width:580px;
+    height: 700px;
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: cursive !important; 
+
+}
+.ppp{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.outerdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+h3{
+    color: black !important;
+    font-family:oswald !important;
+    font-weight: bolder !important;
+}

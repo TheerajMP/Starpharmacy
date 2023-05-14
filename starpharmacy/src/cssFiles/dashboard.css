@@ -1,0 +1,28 @@
+.pos{
+    position:absolute;
+    z-index: -1;
+    width: 100%;
+
+}
+
+.mm{
+    width: 350px !important;
+}
+
+body{
+    background-color: #CFE4C3 ;
+}
+
+@media screen and (max-width:700px) {
+    .pos{
+        width: 770px;
+        text-align: center;
+        align-items: center;
+        gap: 200px;
+        line-height: 80px;
+        padding: 50px;
+        padding-left: 110px;
+        padding-right: 90px;
+    }
+    
+}

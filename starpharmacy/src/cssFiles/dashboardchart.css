@@ -1,0 +1,19 @@
+
+canvas {
+    display: block;
+    box-sizing: border-box;
+    height: 491px;
+    width: 1382px;
+    margin-top:500px;
+    float: right;
+    padding-top: 50px;
+    padding: 50px;
+    
+    font-family: fantasy;
+}
+@media screen and (max-width:768px) {
+    canvas{
+        margin-top:1650px ;
+        padding: 50px;
+    }
+}

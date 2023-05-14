@@ -1,0 +1,142 @@
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,700';
+
+
+/* 
+* {font-family: 'Open Sans', sans-serif;} */
+
+button{
+  border: 2px solid black !important;
+  background-color: #CFE4C3 !important;
+  color: #486452 !important;
+  padding: 10px !important;
+  border-radius: 30px !important;
+  border: 1px !;
+}
+button:hover{
+  background-color: #98dc70 !important;
+}
+a{
+  text-decoration: none !important;
+
+}
+
+.rwd-table {
+  margin: auto;
+  /* min-width: 300px; */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  background:#CFE4C3;
+  color: black;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color:#CFE4C3;
+}
+
+.rwd-table th {
+  display: none;
+  color: #ffffff;
+  font-size: larger;
+ background-color: #486452;
+ font-family: Foldit;
+  
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  /* width: 100px; */
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: center;
+  font-family:monospace;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: .5em 1em;
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* .rwd-table tr:hover {
+    background-color: #a2d8d4;
+  } */
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+
+
+.container {
+  display: block;
+  text-align: center;
+  padding:60px;
+}
+
+@media screen and (max-width:700px){
+  .rwd-table{
+    margin-left:80px;
+    width:600px;
+    
+  }
+  
+}
+
