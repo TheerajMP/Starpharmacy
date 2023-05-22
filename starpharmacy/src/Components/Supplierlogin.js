@@ -6,6 +6,8 @@ import axios from 'axios'
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BASE_URL } from './helper';
+
 const Supplierlogin = () => {
   const [users, setuser] = useState({
     username: '', email: '', password: ''
@@ -21,7 +23,7 @@ const Supplierlogin = () => {
   const loginfield = (e) => {
     try {
       e.preventDefault()
-      axios.post('http://localhost:4000/user/login', users)
+      axios.post(`${BASE_URL}/user/login`, users)
         .then(res => {
           if (res.data.message === "login successfully")
             localStorage.setItem("username", res.data.username)

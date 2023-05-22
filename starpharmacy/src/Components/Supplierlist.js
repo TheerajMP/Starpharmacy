@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import '../cssFiles/supplierlist.css'
 import Dashboard from './Dashboard'
 import axios from 'axios'
+import { BASE_URL } from './helper';
+
 const Supplierlist = () => {
     const [disp, setdisp] = useState([])
     const [button, setButton] = useState(0)
     let datas = []
     const display = () => {
-        axios.get('http://localhost:4000/user/disp')
+        axios.get(`${BASE_URL}/user/disp`)
             .then(res => {
                 datas = res.data
                 setdisp(datas)

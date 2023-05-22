@@ -1,6 +1,9 @@
 import React from 'react'
 import '../cssFiles/requestmedicine.css'
 import { useState } from 'react';
+
+import { BASE_URL } from './helper';
+
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 const Addmedicine = () => {
@@ -16,7 +19,7 @@ const Addmedicine = () => {
     const savepost = async (e) => {
         try {
             e.preventDefault()
-            await axios.post('http://localhost:4000/user/postmed', post)
+            await axios.post(`${BASE_URL}/user/postmed`, post)
         }
         catch (error) {
             alert(error)

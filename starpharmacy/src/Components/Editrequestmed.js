@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { BASE_URL } from './helper';
+
 const Editrequestmed = () => {
   const [drugname, setDrugname] = useState("");
   const [quantity, setQuantity] = useState("");
@@ -10,14 +12,14 @@ const Editrequestmed = () => {
     getUserById();
   }, []);
   const getUserById = async () => {
-    const response = await axios.get(`http://localhost:4000/user/postmedicine/${id}`);
+    const response = await axios.get(`${BASE_URL}/user/postmedicine/${id}`);
     setDrugname(response.data.drugname);
     setQuantity(response.data.quantity);
   };
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:4000/user/postmedicine/${id}`, {
+      await axios.patch(`${BASE_URL}/user/postmedicine/${id}`, {
         drugname,
         quantity
       });

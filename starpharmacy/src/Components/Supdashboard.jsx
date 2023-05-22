@@ -6,6 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Meddeliver from './Meddeliver';
+import { BASE_URL } from './helper';
+
 
 const Supdashboard = () => {
   const user = localStorage.getItem("username")
@@ -16,12 +18,12 @@ const Supdashboard = () => {
   // const [reqmed,setreqMed] = useState(0);
   useEffect(() => {
       toast(`🤓Welcome back ${user}`)
-      axios.get("http://localhost:4000/user/count")
+      axios.get(`${BASE_URL}/user/count`)
           .then((res) => setStockCount(res.data.count))
           .catch((err) => toast(err));
   }, []);
   useEffect(() => {
-      axios.get("http://localhost:4000/user/sup")
+      axios.get(`${BASE_URL}/user/sup`)
           .then((res) => setSup(res.data.count))
           .catch((err) => toast(err));
   }, []);

@@ -3,6 +3,8 @@ import { ShoppingCartOutlined, ShoppingOutlined, UserOutlined, DollarCircleOutli
 import { useEffect, useState } from "react";
 import getOrders, { getRevenue } from '../API/index'
 import '../cssFiles/dashboardchart.css'
+import { BASE_URL } from './helper';
+
 import {
   Chart as ChartJS,
   CategoryScale,

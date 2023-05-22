@@ -3,6 +3,7 @@ import { useState } from 'react';
 import axios from 'axios'
 import '../cssFiles/addsupplier.css'
 import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from './helper';
 const Addsup = () => {
   const [post, setpost] = useState({
     supplier_name: '', email: '', contact: '', location: ''
@@ -16,7 +17,7 @@ const Addsup = () => {
   const savepost = async (e) => {
     try {
       e.preventDefault()
-      await axios.post('http://localhost:4000/user/postsup', post)
+      await axios.post(`${BASE_URL}/user/postsup`, post)
     }
     catch (error) {
       alert(error)

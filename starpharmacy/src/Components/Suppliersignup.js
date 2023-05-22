@@ -6,6 +6,8 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Usercontext from '../usercontext';
+import { BASE_URL } from './helper';
+
 const Suppliersignup = () => {
 	const [users,setuser]=useState({
         username:'',email:'',password:'',confirmpassword:''
@@ -25,7 +27,7 @@ const Suppliersignup = () => {
           //   'Content-type':'application/json'
           // }
         
-          await axios.post('http://localhost:4000/user/createUser',users)
+          await axios.post(`${BASE_URL}/user/createUser`,users)
           // {
           //   headers:headers
           // }
@@ -35,7 +37,7 @@ const Suppliersignup = () => {
             let users1=[]
             const Token=res.data[0].token
             localStorage.setItem("auth-token",Token)
-            await axios.get (`http://localhost:4000/user/fetchuser/${user_id}`,{headers:{"x-auth-token":Token}})
+            await axios.get (`${BASE_URL}/user/fetchuser/${user_id}`,{headers:{"x-auth-token":Token}})
             .then(res=>{
               users1=res.data[0]
               user=({

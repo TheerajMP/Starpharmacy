@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import '../cssFiles/login.css'
+import { BASE_URL } from './helper';
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +20,7 @@ const Login = () => {
   const loginfield = async (e) => {
     try {
       e.preventDefault()
-      await axios.post('http://localhost:4000/user/login', users)
+      await axios.post(`${BASE_URL}/user/login`, users)
         .then(res => {
           if (res.data.message === "login successfully") {
             localStorage.setItem("username", res.data.username)

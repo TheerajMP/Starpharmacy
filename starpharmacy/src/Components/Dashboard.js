@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Dashboardchart from './Dashboardchart'
+import { BASE_URL } from './helper';
+
 function Dashboard() {
     const user = localStorage.getItem("username")
     const [stockCount, setStockCount] = useState(0);
@@ -12,17 +14,17 @@ function Dashboard() {
     const [exp, setExp] = useState(0);
     useEffect(() => {
         toast(`Welcome back ${user}`)
-        axios.get("http://localhost:4000/user/count")
+        axios.get(`${BASE_URL}/user/count`)
             .then((res) => setStockCount(res.data.count))
             .catch((err) => toast(err));
     }, []);
     useEffect(() => {
-        axios.get("http://localhost:4000/user/sup")
+        axios.get(`${BASE_URL}/user/sup`)
             .then((res) => setSup(res.data.count))
             .catch((err) => toast(err));
     }, []);
     useEffect(() => {
-        axios.get("http://localhost:4000/user/expired-products-count")
+        axios.get(`${BASE_URL}/user/expired-products-count`)
             .then((res) => setExp(res.data.count))
             .catch((err) => toast(err));
     }, []);

@@ -4,13 +4,15 @@ import Dashboard from './Dashboard'
 import '../cssFiles/requestedlist.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { BASE_URL } from './helper';
+
 const Medicinelist = () => {
     const navigate = useNavigate()
     const [disp, setdisp] = useState([])
     const [status, setStatus] = useState('not expired')
     let datas = []
     const display = () => {
-        axios.get('http://localhost:4000/user/displayy')
+        axios.get(`${BASE_URL}/user/displayy`)
             .then(res => {
                 datas = res.data
                 setdisp(datas)
@@ -22,7 +24,7 @@ const Medicinelist = () => {
             const now = new Date()
             // alert(ex<now)
             if (ex < now) {
-                await axios.put(`http://localhost:4000/user/updateExpiry/${item._id}`)
+                await axios.put(`${BASE_URL}/user/updateExpiry/${item._id}`)
                     .then((data) => {
                         console.log(data)
                     })

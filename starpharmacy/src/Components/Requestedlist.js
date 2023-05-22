@@ -4,12 +4,14 @@ import '../cssFiles/requestedlist.css'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Dashboard from './Dashboard'
+import { BASE_URL } from './helper';
+
 const Requestedlist = () => {
     const [disp, setdisp] = useState([])
     const [status, setStatus] = useState('pending')
     let datas = []
     const display = () => {
-        axios.get('http://localhost:4000/user/display')
+        axios.get(`${BASE_URL}/user/display`)
             .then(res => {
                 datas = res.data
                 setdisp(datas)
@@ -20,7 +22,7 @@ const Requestedlist = () => {
     }, []);
     const deleteUser = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/user/postmedicine/${id}`);
+            await axios.delete(`${BASE_URL}/user/postmedicine/${id}`);
             display();
         } catch (error) {
             console.log(error);

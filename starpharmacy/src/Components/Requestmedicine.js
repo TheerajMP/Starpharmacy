@@ -3,6 +3,8 @@ import '../cssFiles/requestmedicine.css'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios'
+import { BASE_URL } from './helper';
+
 const Requestmedicine = () => {
   const [post, setpost] = useState({
     supplier_name: '', shopname: '', email: '', contact: '', drugname: '', quantity: '', order_date: '', status: 'Pending'
@@ -16,7 +18,7 @@ const Requestmedicine = () => {
   const savepost = async (e) => {
     try {
       e.preventDefault()
-      await axios.post('http://localhost:4000/user/postmedicine', post)
+      await axios.post(`${BASE_URL}/user/postmedicine`, post)
     }
     catch (error) {
       alert(error)
