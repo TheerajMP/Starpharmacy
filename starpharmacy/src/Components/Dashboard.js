@@ -23,11 +23,11 @@ function Dashboard() {
             .then((res) => setSup(res.data.count))
             .catch((err) => toast(err));
     }, []);
-    useEffect(() => {
-        axios.get(`${BASE_URL}/user/expired-products-count`)
-            .then((res) => setExp(res.data.count))
-            .catch((err) => toast(err));
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`${BASE_URL}/user/expired-products-count`)
+    //         .then((res) => setExp(res.data.count))
+    //         .catch((err) => toast(err));
+    // }, []);
     return (
         <div>
             <div className='pos'>

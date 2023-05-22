@@ -30,12 +30,14 @@ const Sidebar = (props) => {
                     <span>Dashboard</span>
                   </Link>
                 </li>
-                <li className="sidebar-dropdown">
-                  <Link to="#">
+                <span><h3 > MEDICINE</h3  ></span>
+                {/* <li className="sidebar-dropdown"> */}
+                  {/* <Link to="#">
                     <i className="fa fa-shopping-cart" />
                     <span>Medicine </span>
-                  </Link>
-                  <div className="sidebar-submenu">
+                  </Link> */}
+                  {/* <div className="sidebar-submenu"> */}
+                    <span>
                     <ul>
                       <li>
                         <Link to="/Requestedlist">Requested List
@@ -51,14 +53,18 @@ const Sidebar = (props) => {
                         <Link to="/Medicinelist">Medicinelist</Link>
                       </li>
                     </ul>
-                  </div>
-                </li>
-                <li className="sidebar-dropdown">
+                    </span>
+                    <span><h3>SUPPLIER</h3></span>
+
+                  {/* </div> */}
+                {/* </li> */}
+                {/* <li className="sidebar-dropdown">
                   <Link to="#">
                     <i className="far fa-user" />
                     <span>Supplier</span>
-                  </Link>
-                  <div className="sidebar-submenu">
+                  </Link> */}
+                  {/* <div className="sidebar-submenu"> */}
+                  <span>
                     <ul>
                       <li>
                         <Link to="/Supplierlist">Supplier List</Link>
@@ -67,8 +73,9 @@ const Sidebar = (props) => {
                         <Link to="/Addsupplier">Add Supplier</Link>
                       </li>
                     </ul>
-                  </div>
-                </li>
+                    </span>
+                  {/* </div> */}
+                {/* </li> */}
                 <li className="header-menu">
                   <span>Extra</span>
                 </li>

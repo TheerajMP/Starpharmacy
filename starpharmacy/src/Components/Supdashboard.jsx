@@ -45,16 +45,18 @@ const Supdashboard = () => {
           <div className="sidebar-menu">
             <ul>
               <li className="header-menu">
-                <span>General</span>
+                {/* <span>General</span> */}
               </li>
               
-              <li className="sidebar-dropdown">
+              {/* <li className="sidebar-dropdown">
                 <Link to="#">
-                  <i className="fa fa-shopping-cart" />
-                  <span>Medicine </span>
+                  <i className="fa fa-shopping-cart" /> */}
+                  {/* <span>Medicine </span> */}
 
-                </Link>
-                <div className="sidebar-submenu">
+                {/* </Link> */}
+                {/* <div className="sidebar-submenu"> */}
+                <br />
+                <span>
                   <ul>
                     <li>
                       <Link to="/Meddeliver">Medicine Delivery
@@ -63,8 +65,9 @@ const Supdashboard = () => {
                   
 
                   </ul>
-                </div>
-              </li>
+                  </span>
+                {/* </div> */}
+              {/* </li> */}
             
             </ul>
           </div>
